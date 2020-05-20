@@ -103,4 +103,4 @@ geoQuery.get()
 
 
 ### Support me by Buying me a coffee
-<a href="https://www.buymeacoffee.com/chintan369" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" width="217px" height="50px" /></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iamgetabu@gmail.com&lc=US&item_name=Donation+to+DroidGeoFire&no_note=0&cn=&currency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" width="217px" height="50px" /></a>
