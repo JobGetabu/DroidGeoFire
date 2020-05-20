@@ -51,7 +51,8 @@ val db = FirebaseFirestore.getInstance()
 
 /*Create two object to pass location and distance for radius*/
 val centerLocation = Location(centerLatitude, centerLongitude)
-val distanceForRadius = Distance(1.0, DistanceUnit.KILOMETERS) // or you can set unit as DistanceUnit.MILES if you want to find for 1 mile
+val distanceForRadius = Distance(1.0, DistanceUnit.KILOMETERS) 
+// or you can set unit as DistanceUnit.MILES if you want to find for 1 mile
 
 val geoQuery = GeoQuery()
 		.collection("users")
@@ -60,7 +61,7 @@ val geoQuery = GeoQuery()
 		.whereIn("counties", arrayListOf("Kisii","Meru"))
 		.whereNearToLocation(centerLocation, distanceForRadius, fieldName) 
 		//fieldName if you have passed at time of setLocation else it will take default as "g" if you do not pass
-		.startAfter(lastDocument) //optinal (for pagination)
+		.startAfter(lastDocument) //optional (for pagination)
 		.limit(10) // If you requires only 10 data per query
 ```
 
