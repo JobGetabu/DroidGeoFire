@@ -35,7 +35,8 @@ class GeoQueryTask internal constructor(query: GeoQuery) {
                     val removedList: MutableList<DocumentSnapshot> = mutableListOf()
 
                     task.result?.let { querySnapshot ->
-                        removedList.addAll(querySnapshot.documentChanges.filter { documentChange -> documentChange.type == DocumentChange.Type.REMOVED }.map { documentChange -> documentChange.document }.toMutableList())
+                        removedList.addAll(querySnapshot.documentChanges.filter { documentChange -> documentChange.type == DocumentChange.Type.REMOVED }
+                            .map { documentChange -> documentChange.document }.toMutableList())
 
                         val nonRemovedList =
                             querySnapshot.documentChanges.filter { documentChange -> documentChange.type != DocumentChange.Type.REMOVED }
@@ -43,7 +44,11 @@ class GeoQueryTask internal constructor(query: GeoQuery) {
 
                         nonRemovedList.forEach { document ->
                             if (geoQuery.distance != null && geoQuery.currentLocation != null) {
-                                if (document.isInGivenDistance(geoQuery.currentLocation, geoQuery.distance)) {
+                                if (document.isInGivenDistance(
+                                        geoQuery.currentLocation,
+                                        geoQuery.distance
+                                    )
+                                ) {
                                     addedOrModifiedList.add(document)
                                 } else {
                                     removedList.add(document)
@@ -56,6 +61,96 @@ class GeoQueryTask internal constructor(query: GeoQuery) {
                     onCompleteListener.invoke(null, addedOrModifiedList, removedList)
                 }
             }
+        }
+    }
+
+
+    /**
+     * FUNCTION COMMENT
+     *
+     * add task's onComplete listener to get exception or data in a single function
+     * @param onCompleteListener as lambda function
+     * @return none
+     */
+    fun addOnCompleteListener(onCompleteListener: (Exception?, MutableList<DocumentSnapshot>, MutableList<DocumentSnapshot>, MutableList<DocumentSnapshot>) -> Unit) {
+        if (geoQuery.querySnapshotTask == null) {
+            throw Exception("You must call get() method before calling addOnCompleteListener() method!")
+        }
+        val addedOrModifiedList: MutableList<DocumentSnapshot> = mutableListOf()
+        val addedList: MutableList<DocumentSnapshot> = mutableListOf()
+        val modifiedList: MutableList<DocumentSnapshot> = mutableListOf()
+        val removedList: MutableList<DocumentSnapshot> = mutableListOf()
+
+        geoQuery.querySnapshotTask?.let { task ->
+            if (!task.isSuccessful) {
+                val exception = task.exception
+                onCompleteListener.invoke(
+                    exception,
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf()
+                )
+                return
+            }
+
+            val it = task.result!!
+
+            removedList.addAll(it.documentChanges.filter { documentChange -> documentChange.type == DocumentChange.Type.REMOVED }
+                .map { documentChange -> documentChange.document }.toMutableList())
+
+            val nonRemovedList =
+                it.documentChanges.filter { documentChange -> documentChange.type != DocumentChange.Type.REMOVED }
+                    .map { documentChange -> documentChange.document }.toMutableList()
+
+            val theModifiedList =
+                it.documentChanges.filter { documentChange ->
+                    documentChange.type != DocumentChange.Type.REMOVED
+                    documentChange.type == DocumentChange.Type.MODIFIED
+                }
+                    .map { documentChange -> documentChange.document }.toMutableList()
+
+            val theAddedList =
+                it.documentChanges.filter { documentChange ->
+                    documentChange.type != DocumentChange.Type.REMOVED
+                    documentChange.type == DocumentChange.Type.ADDED
+                }
+                    .map { documentChange -> documentChange.document }.toMutableList()
+
+            theModifiedList.forEach { document ->
+                if (geoQuery.distance != null && geoQuery.currentLocation != null) {
+                    if (document.isInGivenDistance(geoQuery.currentLocation, geoQuery.distance)) {
+                        modifiedList.add(document)
+                    }
+                } else {
+                    modifiedList.add(document)
+                }
+            }
+
+
+            theAddedList.forEach { document ->
+                if (geoQuery.distance != null && geoQuery.currentLocation != null) {
+                    if (document.isInGivenDistance(geoQuery.currentLocation, geoQuery.distance)) {
+                        addedList.add(document)
+                    }
+                } else {
+                    addedList.add(document)
+                }
+            }
+
+
+            nonRemovedList.forEach { document ->
+                if (geoQuery.distance != null && geoQuery.currentLocation != null) {
+                    if (document.isInGivenDistance(geoQuery.currentLocation, geoQuery.distance)) {
+                        addedOrModifiedList.add(document)
+                    } else {
+                        removedList.add(document)
+                    }
+                } else {
+                    addedOrModifiedList.add(document)
+                }
+            }
+
+            onCompleteListener.invoke(null, addedList, modifiedList, removedList)
         }
     }
 
@@ -93,7 +188,8 @@ class GeoQueryTask internal constructor(query: GeoQuery) {
                 val removedList: MutableList<DocumentSnapshot> = mutableListOf()
 
                 task.result?.let { querySnapshot ->
-                    removedList.addAll(querySnapshot.documentChanges.filter { documentChange -> documentChange.type == DocumentChange.Type.REMOVED }.map { documentChange -> documentChange.document }.toMutableList())
+                    removedList.addAll(querySnapshot.documentChanges.filter { documentChange -> documentChange.type == DocumentChange.Type.REMOVED }
+                        .map { documentChange -> documentChange.document }.toMutableList())
 
                     val nonRemovedList =
                         querySnapshot.documentChanges.filter { documentChange -> documentChange.type != DocumentChange.Type.REMOVED }
@@ -101,7 +197,11 @@ class GeoQueryTask internal constructor(query: GeoQuery) {
 
                     nonRemovedList.forEach { document ->
                         if (geoQuery.distance != null && geoQuery.currentLocation != null) {
-                            if (document.isInGivenDistance(geoQuery.currentLocation, geoQuery.distance)) {
+                            if (document.isInGivenDistance(
+                                    geoQuery.currentLocation,
+                                    geoQuery.distance
+                                )
+                            ) {
                                 addedOrModifiedList.add(document)
                             } else {
                                 removedList.add(document)
@@ -129,6 +229,7 @@ class GeoQueryTask internal constructor(query: GeoQuery) {
             onSuccessListener.onSuccess(addedOrModifiedList, removedList)
         }
     }
+
 
     /**
      * FUNCTION COMMENT
