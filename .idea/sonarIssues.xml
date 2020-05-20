@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ckdroid/geofirestore/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/Extension.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/GeoQuery.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/exceptions/EmptyCollectionNameException.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/listener/GeoQueryEventListener.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/listener/GeoQueryTask.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/listener/OnTaskCompleteListener.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/listener/OnTaskFailureListener.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/listener/OnTaskSuccessListener.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/listener/Task.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/model/BoundingBox.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/model/Bounds.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/model/Distance.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/model/QueryLocation.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/geofirequery/src/main/java/com/ckdroid/geofirequery/utils/BoundingBoxUtils.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/settings.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/base/TeetraApp.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/emotionindex/EmotionIndexRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/fcmservice/FCMessagingService.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/location/LocationRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/location/LocationViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/marketplace/BuyerViewOfferDetailsActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/marketplace/BuyerViewWorkActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/marketplace/CreateOrderDetailsDialog.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/marketplace/MarketRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/marketplace/MarketplaceListFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/marketplace/MarketplaceViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/marketplace/PickupLocationActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/orders/AllOrdersFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/retrofitapi/ServiceProvider.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/userlocationtracking/GeoSettingModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/userlocationtracking/ShippingOrderRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/util/ExtentionFunctions.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/work/ViewWorkActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Teetra/app/src/main/java/com/teetra/work/WorksModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
