@@ -56,7 +56,8 @@ val distanceForRadius = Distance(1.0, DistanceUnit.KILOMETERS) // or you can set
 val geoQuery = GeoQuery()
 		.collection("users")
 		.whereEqualTo("status","approved")
-		.whereEqualTo("country","IN")
+		.whereEqualTo("country","Kenya")
+		.whereIn("counties", arrayListOf("Kisii","Meru"))
 		.whereNearToLocation(centerLocation, distanceForRadius, fieldName) 
 		//fieldName if you have passed at time of setLocation else it will take default as "g" if you do not pass
 		.startAfter(lastDocument) //optinal (for pagination)
@@ -64,6 +65,19 @@ val geoQuery = GeoQuery()
 ```
 
 ### Listen continues data with real-time changes
+
+```
+geoQuery.addSnapshotListener { firebaseFirestoreException, addedList, modifiedList, removedList  ->
+	...
+	//Do your stuff here
+	//If exception occurs, firebaseFirestoreException will not be null else
+	//In addedList, you will get all data that falls within distance and given query 
+	//In modifiedList, you will get all data that falls within distance and given query, with changes
+	//In removedList, you will get data which is not relevent to your query or out of distance
+}
+```
+
+#### OR
 
 ```
 geoQuery.addSnapshotListener { firebaseFirestoreException, addedOrModifiedDataList, removedList  ->
@@ -77,6 +91,17 @@ geoQuery.addSnapshotListener { firebaseFirestoreException, addedOrModifiedDataLi
 ```
 
 ### Listen data for only once
+
+
+```
+geoQuery.get()
+	.addOnCompleteListener { firebaseFirestoreException, addedList, modifiedList, removedList   ->
+		...
+		//Do your stuff here
+	}
+```
+
+#### OR
 
 ```
 geoQuery.get()
