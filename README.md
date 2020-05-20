@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/chintan369/Geo-FireStore-Query.svg)](https://jitpack.io/#chintan369/Geo-FireStore-Query)
+[![](https://jitpack.io/v/JobGetabu/DroidGeoFire.svg)](https://jitpack.io/#JobGetabu/DroidGeoFire)
 
 # Geo-FireStore-Query
 This project is created to give support to search geo-location based items using firestore's native query which also supports pagination and all the kind of condition which firestore query does.
@@ -20,7 +20,7 @@ allprojects {
 
 ```gradle
 dependencies {
-  implementation 'com.github.chintan369:Geo-FireStore-Query:latest-version'
+  implementation 'com.github.JobGetabu:DroidGeoFire:latest-version'
 }
 ```
 
