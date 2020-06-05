@@ -92,13 +92,33 @@ class GeoQuery {
         return this
     }
 
-    fun whereIn(field: String, value: ArrayList<Any>): GeoQuery{
+    fun <T: Any>whereIn(field: String, value: List<T>): GeoQuery{
         this.query = this.query.whereIn(field, value)
         return this
     }
 
-    fun whereIn(field: FieldPath, value: ArrayList<Any>): GeoQuery{
+    fun <T: Any>whereIn(field: FieldPath, value: List<T>): GeoQuery{
         this.query = this.query.whereIn(field, value)
+        return this
+    }
+
+    fun <T: Any>whereArrayContainsAny(field: String, value: List<T>): GeoQuery{
+        this.query = this.query.whereArrayContainsAny(field, value)
+        return this
+    }
+
+    fun <T: Any>whereArrayContainsAny(field: FieldPath, value: List<T>): GeoQuery{
+        this.query = this.query.whereArrayContainsAny(field, value)
+        return this
+    }
+
+    fun <T: Any>whereArrayContains(field: String, value: List<T>): GeoQuery{
+        this.query = this.query.whereArrayContainsAny(field, value)
+        return this
+    }
+
+    fun <T: Any>whereArrayContains(field: FieldPath, value: List<T>): GeoQuery{
+        this.query = this.query.whereArrayContainsAny(field, value)
         return this
     }
 

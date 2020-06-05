@@ -34,7 +34,7 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    api('com.google.firebase:firebase-core:17.4.1')
+    api('com.google.firebase:firebase-core:17.4.2')
     api('com.google.firebase:firebase-firestore:21.4.3')
 }
 repositories {
