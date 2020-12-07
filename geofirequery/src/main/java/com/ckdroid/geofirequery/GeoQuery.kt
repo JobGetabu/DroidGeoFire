@@ -52,6 +52,16 @@ class GeoQuery {
         return this
     }
 
+    fun whereNotEqualTo(field: String, value: Any): GeoQuery {
+        this.query = this.query.whereNotEqualTo(field, value)
+        return this
+    }
+
+    fun whereNotEqualTo(fieldPath: FieldPath, value: Any): GeoQuery {
+        this.query = this.query.whereNotEqualTo(fieldPath, value)
+        return this
+    }
+
     fun whereGreaterThan(field: String, value: Any): GeoQuery {
         this.query = this.query.whereGreaterThan(field, value)
         return this
@@ -99,6 +109,16 @@ class GeoQuery {
 
     fun <T: Any>whereIn(field: FieldPath, value: List<T>): GeoQuery{
         this.query = this.query.whereIn(field, value)
+        return this
+    }
+
+    fun <T: Any>whereNotIn(field: String, value: List<T>): GeoQuery{
+        this.query = this.query.whereNotIn(field, value)
+        return this
+    }
+
+    fun <T: Any>whereNotIn(field: FieldPath, value: List<T>): GeoQuery{
+        this.query = this.query.whereNotIn(field, value)
         return this
     }
 
